@@ -2,18 +2,17 @@ CREATE TABLE "departments" (
     "dept_no" varchar   NOT NULL,
     "dept_name" varchar   NOT NULL,
     CONSTRAINT "pk_departments" PRIMARY KEY (
-        "dept_no"
+        "dept_no","dept_name"
      )
 );
 
 CREATE TABLE "dept_emp" (
     "emp_no" int   NOT NULL,
     "dept_no" varchar   NOT NULL,
-    CONSTRAINT "pk_dept_emp:" PRIMARY KEY (
-        "emp_no"
+     PRIMARY KEY (
+        "emp_no","dept_no"
      )
 );
-
 CREATE TABLE "dept_manager" (
     "dept_no" varchar   NOT NULL,
     "emp_no" int   NOT NULL,
